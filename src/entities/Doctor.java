@@ -1,34 +1,15 @@
 package entities;
 
 public class Doctor {
-    private int DoctorId;
+    private int id;
     private String name;
     private String specialization;
 
-    public Doctor(int DoctorId, String name, String specialization) {
-        setDoctorId(DoctorId);
-        setName(name);
-        setSpecialization(specialization);
-    }
-
-    public void setDoctorId(int  DoctorId) {
-        this.DoctorId = DoctorId;
-    }
-    public void setName(String name) {
+    public Doctor(int id, String name, String specialization) {
+        this.id = id;
         this.name = name;
-    }
-    public void setSpecialization(String specialization) {
         this.specialization = specialization;
     }
-    public int getDoctorId() {
-        return DoctorId;
 
-    }
-    public String getName() {
-        return name;
-    }
-    public String getSpecialization() {
-        return specialization;
-
-    }
+    public int getId() { return id; }
 }

@@ -7,38 +7,30 @@ public class Appointment {
     private int id;
     private int patientId;
     private int doctorId;
-    private LocalDateTime appointmentTime;
+    private LocalDateTime time;
+    private String status; // BOOKED, CANCELLED
 
-    // используется при CREATE (id генерирует БД)
-    public Appointment(int patientId, int doctorId, LocalDateTime appointmentTime) {
+    public Appointment(int patientId, int doctorId, LocalDateTime time) {
         this.patientId = patientId;
         this.doctorId = doctorId;
-        this.appointmentTime = appointmentTime;
+        this.time = time;
+        this.status = "BOOKED";
     }
 
-    // используется при READ (findById, findAll)
-    public Appointment(int id, int patientId, int doctorId, LocalDateTime appointmentTime) {
+    public Appointment(int id, int patientId, int doctorId,
+                       LocalDateTime time, String status) {
         this.id = id;
         this.patientId = patientId;
         this.doctorId = doctorId;
-        this.appointmentTime = appointmentTime;
+        this.time = time;
+        this.status = status;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public int getPatientId() {
-        return patientId;
-    }
-
-    public int getDoctorId() {
-        return doctorId;
-    }
-
-    public LocalDateTime getAppointmentTime() {
-        return appointmentTime;
-    }
+    public int getId() { return id; }
+    public int getPatientId() { return patientId; }
+    public int getDoctorId() { return doctorId; }
+    public LocalDateTime getTime() { return time; }
+    public String getStatus() { return status; }
 
     @Override
     public String toString() {
@@ -46,7 +38,8 @@ public class Appointment {
                 "id=" + id +
                 ", patientId=" + patientId +
                 ", doctorId=" + doctorId +
-                ", appointmentTime=" + appointmentTime +
+                ", time=" + time +
+                ", status='" + status + '\'' +
                 '}';
     }
 

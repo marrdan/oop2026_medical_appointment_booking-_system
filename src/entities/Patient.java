@@ -1,34 +1,15 @@
 package entities;
 
 public class Patient {
+    private int id;
     private String name;
-    private int PacientId;
     private String phone;
 
-    public Patient(String name, int PacientId, String phone) {
-        setName(name);
-        setPacientId(PacientId);
-        setPhone(phone);
-    }
-
-    public void setName(String name) {
+    public Patient(int id, String name, String phone) {
+        this.id = id;
         this.name = name;
-    }
-
-    public void setPacientId(int PacientId) {
-        this.PacientId = PacientId;
-    }
-    public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    public String getName() {
-        return name;
-    }
-    public int getPacientId() {
-        return PacientId;
-    }
-    public String getPhone() {
-        return phone;
-    }
+    public int getId() { return id; }
 }
