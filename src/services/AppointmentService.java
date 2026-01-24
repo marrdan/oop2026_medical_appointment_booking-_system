@@ -11,8 +11,7 @@ public class AppointmentService {
     private final DoctorAvailabilityService availability;
 
 
-    public AppointmentService(AppointmentRepository repo,
-                              DoctorAvailabilityService availability) {
+    public AppointmentService(AppointmentRepository repo, DoctorAvailabilityService availability) {
         this.repo = repo;
         this.availability = availability;
     }

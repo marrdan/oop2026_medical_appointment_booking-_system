@@ -34,13 +34,8 @@ public class Appointment {
 
     @Override
     public String toString() {
-        return "Appointment{" +
-                "id=" + id +
-                ", patientId=" + patientId +
-                ", doctorId=" + doctorId +
-                ", time=" + time +
-                ", status='" + status + '\'' +
-                '}';
+        return "Appointment {" + "id=" + id + ", patientId=" + patientId + ", doctorId=" + doctorId + ", time=" +
+                time + ", status='" + status + '\'' + '}';
     }
 
 }

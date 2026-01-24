@@ -12,4 +12,7 @@ public class Doctor {
     }
 
     public int getId() { return id; }
+    public String getDoctor_name() { return doctor_name; }
+    public String getSpecialization() { return specialization; }
+
 }

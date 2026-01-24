@@ -15,15 +15,18 @@ public class AppointmentRepositoryImpl implements AppointmentRepository {
     public AppointmentRepositoryImpl(IDB db) {
         this.db = db;
     }
+
+
+
     @Override
     public void save(Appointment a) {
+
         String sql = """
         INSERT INTO appointments(patient_id, doctor_id, appointment_time, status)
         VALUES (?, ?, ?, ?)
     """;
         try (Connection c = db.getConnection();
              PreparedStatement ps = c.prepareStatement(sql)) {
-
             ps.setInt(1, a.getPatientId());
             ps.setInt(2, a.getDoctorId());
             ps.setTimestamp(3, Timestamp.valueOf(a.getTime()));
