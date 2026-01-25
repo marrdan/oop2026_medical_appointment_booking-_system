@@ -7,7 +7,6 @@ import java.sql.SQLException;
 public class PostegresDB implements IDB{
 
 
-
     private static final String URL =
             "jdbc:postgresql://aws-1-ap-northeast-1.pooler.supabase.com:5432/postgres?sslmode=require";
 
@@ -18,4 +17,5 @@ public class PostegresDB implements IDB{
     public Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
+
 }

@@ -26,6 +26,10 @@ public class Appointment {
         this.status = status;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public int getId() { return id; }
     public int getPatientId() { return patientId; }
     public int getDoctorId() { return doctorId; }
@@ -34,13 +38,8 @@ public class Appointment {
 
     @Override
     public String toString() {
-        return "Appointment{" +
-                "id=" + id +
-                ", patientId=" + patientId +
-                ", doctorId=" + doctorId +
-                ", time=" + time +
-                ", status='" + status + '\'' +
-                '}';
+        return "Appointment {" + "id=" + id + ", patientId=" + patientId + ", doctorId=" + doctorId + ", time=" +
+                time + ", status='" + status + '\'' + '}';
     }
 
 }
